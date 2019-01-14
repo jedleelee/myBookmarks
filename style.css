@@ -1,10 +1,16 @@
 *{
     margin: 0;padding: 0;
 }
+body{
+    height: 100vh;
+    background: red url(image/man.jpg) no-repeat center center;
+    background-size:cover
+    
+}
 kbd{
     border: 1px solid gray;
-    width: 4em;
-    height: 4em;
+    width: 53px;
+    height: 55px;
     display: inline-block;
     text-transform: uppercase;
     position: relative;
@@ -20,10 +26,45 @@ kbd:hover > button{
 }
 main{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height :100vh;
 }
+/*#frist{
+    width: 747px;
+    height: 211px;
+    background-color: rgba(225,225,225,0.2);
+    border-radius: 29px;
+}*/
 #frist > div:nth-child(2){
-    margin-left: 2em;
+    margin-left: -7px;
 }
 #frist > div:nth-child(3){
-    margin-left: 4.7em;
+    margin-left: -7px;
 }
+.key{
+    background: linear-gradient(to bottom, #2d2d2d 0%,#000000 100%);
+    border: 1px solid #1a191a;
+    box-shadow: 0 0 0 1px #2b282b,0 0 0 2px black,0 2px 2px 3px black;
+    margin-left: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 17px;
+    position: relative;
+}
+.row{
+    margin-bottom: 14px;
+}
+.key img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 18px;
+    top: 0;
+}
+
