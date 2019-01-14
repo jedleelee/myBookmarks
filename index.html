@@ -82,26 +82,25 @@
                         var but = zxcvbnm['target']
                         var image = but.previousSibling
                         var key = but['id']
-                        var x= prompt('输入网址')
+                        var x = prompt('输入网址')
                         hash[key] = x
-                        image.src= 'http//'+x + '/favicon.ico'
+                        image.src = 'http://'+x + '/favicon.ico'
                         image.onerror = function(xxx){
-                        console.log('下载失败')
-                        xxx.target.src = 'http//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                            xxx.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
                         }
                         localStorage.setItem('xyz',JSON.stringify(hash))
-                        console.log(hash)
+                        
                     }
 
                     var image = tag('img')
                     if(hash[row[index2]]){
-                        image.src= 'http//'+hash[row[index2]] + '/favicon.ico'
+                        image.src = 'http://'+ hash[row[index2]] + '/favicon.ico'
                     }else{
-                        image.src= 'http//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                        image.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
                     }
                     image.onerror = function(xxx){
                         console.log('下载失败')
-                        xxx.target.src = 'http//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                        xxx.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
                     }
 
                     kebo.appendChild(spa)
@@ -115,12 +114,12 @@
         function listenToUser(hash){
             document.onkeypress = function(zxcvbnm){
                 console.log('你输入了键')
-                key = zxcvbnm['key']
-                website = hash[key]
-                console.log(website)
+                var key = zxcvbnm['key']
+                var website = hash[key]
                 //location.href = 'http://'+website 本页面打开//
                 window.open('http://'+website, '_blank')
             }
+            
         }
     </script>        
 </body>
